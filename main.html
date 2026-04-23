@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>KFanverse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="home-wrapper">
+
+    <!-- NAVBAR -->
+
+    <div class="home-navbar">
+
+        <div class="brand-left">
+
+            <img src="images/logo.png" class="home-logo" alt="KFanverse Logo">
+
+        </div>
+
+        <ul class="home-nav-links">
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">Updates</a></li>
+
+            <li><a href="#">Quizzes</a></li>
+
+            <li><a href="#">Discussions</a></li>
+
+            <li><a href="#">Merchandise</a></li>
+
+            <li><a href="#">About Us</a></li>
+
+        </ul>
+
+        <div class="home-nav-actions">
+
+            <button class="search-btn">⌕</button>
+
+            <button class="outline-btn">Login</button>
+
+            <button class="filled-btn">Sign Up</button>
+
+        </div>
+
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero-home">
+
+        <div class="hero-image-card">
+
+            <button class="hero-arrow left-arrow" onclick="prevHero()">‹</button>
+
+            <img id="heroCarousel" src="images/hero1.jpg" alt="Hero Carousel">
+
+            <button class="hero-arrow right-arrow" onclick="nextHero()">›</button>
+
+        </div>
+
+        <div class="hero-text-card">
+
+            <p class="hero-mini-tag">WELCOME TO</p>
+
+            <h1>KFanverse</h1>
+
+            <p class="hero-tagline">your kpop universe all in one place</p>
+
+            <p class="hero-desc">
+
+                Stay updated with the latest K-pop news, test your fandom knowledge,
+
+                join fan discussions, and explore must-have merch all in one stylish space.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="filled-btn">Explore Now</button>
+
+                <button class="outline-btn">Browse Updates</button>
+
+            </div>
+
+            <div class="hero-dots">
+
+                <span class="dot active-dot"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TOP INFO CARDS -->
+
+    <section class="top-stats-grid">
+
+        <div class="stat-card">
+
+            <h3>174+</h3>
+
+            <p>Featured fandom topics</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Team</h3>
+
+            <p>A fan-centered space for updates, quizzes, discussions, and merch culture.</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>12k+</h3>
+
+            <p>Fans engaged in quizzes and content</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>34k</h3>
+
+            <p>Community interactions and discussions</p>
+
+        </div>
+
+    </section>
+
+    <!-- LATEST UPDATES + TRENDING QUIZZES -->
+
+    <section class="content-row two-panels">
+
+        <div class="panel-box large-panel">
+
+            <div class="panel-head">
+
+                <h2>Latest Updates</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div class="updates-grid">
+
+                <div class="update-card">
+
+                    <img src="images/update1.jpg" alt="Bigbang Update">
+
+                    <div class="update-info">
+
+                        <span class="badge">NEWS</span>
+
+                        <h3>BIGBANG stuns fans with Coachella 2026 performance</h3>
+
+                        <p>A legendary stage comeback that sparked massive fan reactions online.</p>
+
+                        <small>1 hr ago</small>
+
+                    </div>
+
+                </div>
+
+                <div class="update-card">
+
+                    <img src="images/update2.jpg" alt="IOI Update">
+
+                    <div class="update-info">
+
+                        <span class="badge">COMEBACK</span>
+
+                        <h3>IOI releases first 2026 comeback concept photos</h3>
+
+                        <p>The long-awaited visuals have fans buzzing with excitement and nostalgia.</p>
+
+                        <small>2 hrs ago</small>
+
+                    </div>
+
+                </div>
+
+                <div class="update-card">
+
+                    <img src="images/update3.jpg" alt="Heesung Update">
+
+                    <div class="update-info">
+
+                        <span class="badge">UPDATE</span>
+
+                        <h3>Heesung officially changes his stage name to Evan</h3>
+
+                        <p>The announcement quickly trended as fans shared their first reactions.</p>
+
+                        <small>3 hrs ago</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="panel-box side-panel">
+
+            <div class="panel-head">
+
+                <h2>Trending Quizzes</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div class="quiz-list">
+
+                <div class="quiz-item">
+
+                    <img src="images/quiz1.jpg" alt="Quiz 1">
+
+                    <div>
+
+                        <h3>Guess what company is this group</h3>
+
+                        <button class="mini-btn">Take Quiz</button>
+
+                    </div>
+
+                </div>
+
+                <div class="quiz-item">
+
+                    <img src="images/quiz2.jpg" alt="Quiz 2">
+
+                    <div>
+
+                        <h3>EXO Trivia Challenge</h3>
+
+                        <button class="mini-btn">Take Quiz</button>
+
+                    </div>
+
+                </div>
+
+                <div class="quiz-item">
+
+                    <img src="images/quiz3.jpg" alt="Quiz 3">
+
+                    <div>
+
+                        <h3>Guess what gen is this group</h3>
+
+                        <button class="mini-btn">Take Quiz</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DISCUSSIONS + MERCH -->
+
+    <section class="content-row two-panels">
+
+        <div class="panel-box side-panel">
+
+            <div class="panel-head">
+
+                <h2>Popular Discussions</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div class="discussion-list">
+
+                <div class="discussion-item">
+
+                    <h3>Which 2026 comeback has the best concept so far?</h3>
+
+                    <p>By User_21 • 89 replies • 1 hr ago</p>
+
+                </div>
+
+                <div class="discussion-item">
+
+                    <h3>Do you think 2nd gen groups are dominating nostalgia again?</h3>
+
+                    <p>By FanverseTalk • 64 replies • 2 hrs ago</p>
+
+                </div>
+
+                <div class="discussion-item">
+
+                    <h3>What makes a fandom space feel truly welcoming?</h3>
+
+                    <p>By KHeartDaily • 42 replies • 3 hrs ago</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="panel-box large-panel">
+
+            <div class="panel-head">
+
+                <h2>Featured Merch</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div class="merch-grid">
+
+                <div class="merch-card">
+
+                    <img src="images/merch1.jpg" alt="IZNA Album">
+
+                    <h3>IZNA NOT JUST PRETTY Album</h3>
+
+                    <p>$29.99</p>
+
+                </div>
+
+                <div class="merch-card">
+
+                    <img src="images/merch2.jpg" alt="ZB1 Album">
+
+                    <h3>ZB1 Reflow Special Limited Album</h3>
+
+                    <p>$34.99</p>
+
+                </div>
+
+                <div class="merch-card">
+
+                    <img src="images/merch3.jpg" alt="IZNA Lightstick">
+
+                    <h3>IZNA Lightstick</h3>
+
+                    <p>$54.99</p>
+
+                </div>
+
+                <div class="merch-card">
+
+                    <img src="images/merch4.jpg" alt="Aespa Lightstick">
+
+                    <h3>Aespa Lightstick</h3>
+
+                    <p>$52.99</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GROUP MEMBERS -->
+
+    <section class="panel-box members-section">
+
+        <div class="panel-head">
+
+            <h2>K-Pop Groups</h2>
+
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="members-row">
+
+            <button class="member-arrow">‹</button>
+
+            <div class="member-card">
+
+                <img src="images/group1.jpg" alt="Girls' Generation">
+
+                <h3>Girls' Generation</h3>
+
+                <p>Legendary Girl Group</p>
+
+            </div>
+
+            <div class="member-card">
+
+                <img src="images/group2.jpg" alt="2PM">
+
+                <h3>2PM</h3>
+
+                <p>2nd Gen Boy Group</p>
+
+            </div>
+
+            <div class="member-card">
+
+                <img src="images/group3.jpg" alt="Seventeen">
+
+                <h3>Seventeen</h3>
+
+                <p>Performance Powerhouse</p>
+
+            </div>
+
+            <div class="member-card">
+
+                <img src="images/group4.jpg" alt="NCT Dream">
+
+                <h3>NCT Dream</h3>
+
+                <p>Youthful Unit</p>
+
+            </div>
+
+            <div class="member-card">
+
+                <img src="images/group5.jpg" alt="IZNA">
+
+                <h3>IZNA</h3>
+
+                <p>Rising Girl Group</p>
+
+            </div>
+
+            <div class="member-card">
+
+                <img src="images/group6.jpg" alt="Babymonster">
+
+                <h3>Babymonster</h3>
+
+                <p>New Gen Power</p>
+
+            </div>
+
+            <button class="member-arrow">›</button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="home-footer">
+
+        <div class="footer-brand">
+
+            <img src="images/logo.png" class="footer-logo" alt="KFanverse Logo">
+
+            <p>Your ultimate K-pop universe for updates, quizzes, discussions, and merch.</p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <a href="#">Home</a>
+
+                <a href="#">Updates</a>
+
+                <a href="#">Quizzes</a>
+
+                <a href="#">Merchandise</a>
+
+            </div>
+
+            <div>
+
+                <h4>Support</h4>
+
+                <a href="#">Contact Us</a>
+
+                <a href="#">FAQ</a>
+
+                <a href="#">Guidelines</a>
+
+                <a href="#">Terms</a>
+
+            </div>
+
+            <div>
+
+                <h4>Follow Us</h4>
+
+                <a href="#">Facebook</a>
+
+                <a href="#">Instagram</a>
+
+                <a href="#">YouTube</a>
+
+                <a href="#">X</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

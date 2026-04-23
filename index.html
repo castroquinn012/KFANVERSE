@@ -3,10 +3,85 @@
 <html>
 
 <head>
-<title>Kfanverse Login Page</title>
+
+<title>KFanverse Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
-<h1> Login Page </h1>
-<p> This is a test page! </p>
+<body class="login-page">
+
+<div class="login-wrapper">
+
+    <div class="login-form-side">
+
+        <div class="login-form-box">
+
+            <img src="images/logo.png" class="login-logo" alt="KFanverse Logo">
+
+            <h2>Login</h2>
+
+            <p class="form-desc">Welcome back to KFanverse, your kpop universe all in one place.</p>
+
+            <label>Email Address</label>
+
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+
+            <input type="password" placeholder="Enter your password">
+
+            <div class="login-options">
+
+                <label class="remember-me">
+
+                    <input type="checkbox"> Keep me logged in
+
+                </label>
+
+                <a href="#">Forgot password?</a>
+
+            </div>
+
+            <button class="login-btn" onclick="enterSite()">Log in</button>
+
+            <button class="register-btn">Sign Up</button>
+
+            <p class="register-text">
+
+                Don’t have an account? <span>Create account</span>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="login-image-side">
+
+        <img src="images/login-bg.jpg" alt="Kpop Concert Background">
+
+        <div class="login-image-overlay">
+
+            <div class="overlay-card">
+
+                <h1>KFanverse</h1>
+
+                <p>your kpop universe all in one place</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
+
+</html>
