@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			<title>KFanverse Quizzes</title>
+
+			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+			<link rel="stylesheet" href="style.css">
+
+			</head>
+
+			<body class="main-home-page">
+			<div class="home-wrapper">
+			<div class="home-navbar">
+			<div class="brand-left">
+			<img src="images/logo.png" class="home-logo" alt="KFanverse Logo">
+
+			</div>
+
+				<ul class="home-nav-links">
+
+					<li><a href="main.html">Home</a></li>
+					<li><a href="updates.html">Updates</a></li>
+					<li><a href="quizzes.html" class="active-nav">Quizzes</a></li>
+					<li><a href="community.html">Discussions</a></li>
+					<li><a href="merch.html">Merchandise</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="profile.html">Profile</a></li>
+
+			</ul>
+
+				<div class="home-nav-actions">
+
+					<button class="search-btn">⌕</button>
+					<button class="outline-btn" onclick="window.location.href='index.html'">Login</button>
+					<button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+
+			</div>
+
+			</div>
+
+				<section class="inner-page-title">
+
+					<h1>Quizzes</h1>
+
+					<p>Test your K-pop knowledge with fun quizzes about groups, companies, generations, songs, and fandom culture.</p>
+
+			</section>
+
+				<section class="quiz-page-layout">
+
+					<div class="quiz-main-panel">
+					<div class="updates-tabs">
+					<button class="active-tab" onclick="showQuizCategory('all')">All Quizzes</button>
+					<button onclick="showQuizCategory('company')">Company</button>
+					<button onclick="showQuizCategory('trivia')">Trivia</button>
+					<button onclick="showQuizCategory('generation')">Generation</button>
+
+			</div>
+
+				<div class="quiz-card-grid">
+
+					<div class="full-quiz-card" data-category="company">
+					<img src="images/quiz1.jpg" alt="Company Quiz">
+					<div class="full-quiz-info">
+					<span class="badge">COMPANY</span>
+					<h3>Guess What Company Is This Group?</h3>
+					<p>Can you identify the entertainment company based on the group shown?</p>
+					<button class="filled-btn" onclick="startQuiz('company')">Start Quiz</button>
+
+			</div>
+
+			</div>
+
+				<div class="full-quiz-card" data-category="trivia">
+
+					<img src="images/quiz2.jpg" alt="EXO Trivia">
+					<div class="full-quiz-info">
+					<span class="badge">TRIVIA</span>
+					<h3>EXO Trivia Challenge</h3>
+					<p>Answer fun questions about EXO members, songs, eras, and iconic moments.</p>
+					<button class="filled-btn" onclick="startQuiz('exo')">Start Quiz</button>
+
+			</div>
+
+			</div>
+
+				<div class="full-quiz-card" data-category="generation">
+
+					<img src="images/quiz3.jpg" alt="Generation Quiz">
+					<div class="full-quiz-info">
+					<span class="badge">GENERATION</span>
+					<h3>Guess What Gen Is This Group</h3>
+					<p>Test if you can tell whether a group belongs to 1st, 2nd, 3rd, 4th, or 5th gen.</p>
+					<button class="filled-btn" onclick="startQuiz('generation')">Start Quiz</button>
+
+			</div>
+
+			</div>
+
+				<div class="full-quiz-card" data-category="trivia">
+
+					<img src="images/qz1.jpg" alt="Song Quiz">
+					<div class="full-quiz-info">
+					<span class="badge">SONGS</span>
+					<h3>Guess the K-pop Song</h3>
+					<p>Read the clue and guess which popular K-pop song it belongs to.</p>
+					<button class="filled-btn" onclick="startQuiz('song')">Start Quiz</button>
+
+			</div>
+
+			</div>
+
+			<div class="full-quiz-card" data-category="company">
+
+			<img src="images/qz2.jpg" alt="Agency Quiz">
+
+			<div class="full-quiz-info">
+
+			<span class="badge">AGENCY</span>
+
+			<h3>Match the Group to the Agency</h3>
+
+			<p>Choose the correct agency for each group and see how well you know K-pop companies.</p>
+
+			<button class="filled-btn" onclick="startQuiz('agency')">Start Quiz</button>
+
+			</div>
+
+			</div>
+
+			<div class="full-quiz-card" data-category="generation">
+
+			<img src="images/qz3.jpg" alt="Era Quiz">
+
+			<div class="full-quiz-info">
+
+			<span class="badge">ERA</span>
+
+			<h3>Iconic Era Quiz</h3>
+
+			<p>Guess the era based on outfits, concepts, and visual clues.</p>
+
+			<button class="filled-btn" onclick="startQuiz('era')">Start Quiz</button>
+
+			</div>
+
+			</div>
+
+			</div>
+
+			</div>
+
+			<aside class="quiz-sidebar">
+
+			<div class="side-box">
+
+			<h3>Quiz Result</h3>
+
+			<p id="quizMessage">Choose a quiz to begin.</p>
+
+			</div>
+
+			<div class="side-box">
+
+			<h3>Top Players</h3>
+
+			<ol>
+
+			<li>NayaStar — 98%</li>
+
+			<li>KpopCloud — 94%</li>
+
+			<li>FanverseAce — 91%</li>
+
+			<li>PinkBeat — 88%</li>
+
+			</ol>
+
+			</div>
+
+			<div class="side-box">
+
+			<h3>Quiz Categories</h3>
+
+			<ul>
+
+			<li>Company Guessing</li>
+
+			<li>Artist Trivia</li>
+
+			<li>K-pop Generations</li>
+
+			<li>Song Challenges</li>
+
+			</ul>
+
+			</div>
+
+			</aside>
+
+			</section>
+
+			</div>
+
+			<div id="quizModal" class="quiz-modal">
+
+			<div class="quiz-modal-card">
+
+			<button class="close-quiz" onclick="closeQuiz()">×</button>
+
+			<h2 id="quizTitle">Quiz Title</h2>
+
+			<p id="quizProgress">Question 1 of 5</p>
+
+			<div class="quiz-question-box">
+
+			<h3 id="quizQuestion">Question appears here</h3>
+
+			<div id="quizChoices" class="quiz-choices"></div>
+
+			</div>
+
+			<div class="quiz-controls">
+
+			<button class="outline-btn" onclick="closeQuiz()">Cancel</button>
+
+			<button class="filled-btn" onclick="nextQuestion()">Next</button>
+
+			</div>
+
+			<p id="quizScoreText"></p>
+
+			</div>
+
+			</div>
+
+			<script src="script.js"></script>
+
+			</body>
+
+			</html>

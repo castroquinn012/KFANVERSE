@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KFanverse Merchandise</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="home-wrapper">
+
+<div class="home-navbar">
+
+<div class="brand-left">
+
+<img src="images/logo.png" class="home-logo" alt="KFanverse Logo">
+
+</div>
+
+<ul class="home-nav-links">
+
+<li><a href="main.html">Home</a></li>
+
+<li><a href="updates.html">Updates</a></li>
+
+<li><a href="quizzes.html">Quizzes</a></li>
+
+<li><a href="community.html">Discussions</a></li>
+
+<li><a href="merch.html" class="active-nav">Merchandise</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="profile.html">Profile</a></li>
+
+</ul>
+
+<div class="home-nav-actions">
+
+<button class="search-btn">⌕</button>
+
+<button class="outline-btn" onclick="window.location.href='index.html'">Login</button>
+
+<button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+
+</div>
+
+</div>
+
+<section class="inner-page-title">
+
+<h1>Merchandise</h1>
+
+<p>Browse albums, lightsticks, collectibles, and K-pop essentials. This section is for product viewing and information only.</p>
+
+</section>
+
+<section class="merch-page-layout">
+
+<div class="merch-main-panel">
+
+<div class="updates-tabs">
+
+<button class="active-tab" onclick="filterMerch('all')">All</button>
+
+<button onclick="filterMerch('album')">Albums</button>
+
+<button onclick="filterMerch('lightstick')">Lightsticks</button>
+
+<button onclick="filterMerch('collectible')">Collectibles</button>
+
+</div>
+
+<div class="merch-page-grid">
+
+<div class="merch-product-card" data-type="album">
+
+<img src="images/merch1.jpg" alt="IZNA Album">
+
+<div class="merch-product-info">
+
+<span class="badge">ALBUM</span>
+
+<h3>IZNA NOT JUST PRETTY Album</h3>
+
+<p>A collectible album featuring elegant packaging, photocards, and fan-favorite inclusions.</p>
+
+<strong>$29.99</strong>
+
+<button class="filled-btn" onclick="showMerchDetails('IZNA NOT JUST PRETTY Album')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="merch-product-card" data-type="album">
+
+<img src="images/merch2.jpg" alt="ZB1 Album">
+
+<div class="merch-product-info">
+
+<span class="badge">ALBUM</span>
+
+<h3>ZB1 Reflow Special Limited Album</h3>
+
+<p>A limited special album with premium concept photos and exclusive collectible items.</p>
+
+<strong>$34.99</strong>
+
+<button class="filled-btn" onclick="showMerchDetails('ZB1 Reflow Special Limited Album')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="merch-product-card" data-type="lightstick">
+
+<img src="images/merch3.jpg" alt="IZNA Lightstick">
+
+<div class="merch-product-info">
+
+<span class="badge">LIGHTSTICK</span>
+
+<h3>IZNA Lightstick</h3>
+
+<p>A fan essential designed for concerts, streaming events, and fandom celebrations.</p>
+
+<strong>$54.99</strong>
+
+<button class="filled-btn" onclick="showMerchDetails('IZNA Lightstick')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="merch-product-card" data-type="lightstick">
+
+<img src="images/merch4.jpg" alt="Aespa Lightstick">
+
+<div class="merch-product-info">
+
+<span class="badge">LIGHTSTICK</span>
+
+<h3>Aespa Lightstick</h3>
+
+<p>A stylish official lightstick made for concerts, fan gatherings, and collection displays.</p>
+
+<strong>$52.99</strong>
+
+<button class="filled-btn" onclick="showMerchDetails('Aespa Lightstick')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="merch-product-card" data-type="collectible">
+
+<img src="images/mer1.jfif" alt="Photocard Set">
+
+<div class="merch-product-info">
+
+<span class="badge">COLLECTIBLE</span>
+
+<h3>IZNA Photocard Set</h3>
+
+<p>A cute fan collectible set perfect for binders, deco pages, and display collections.</p>
+
+<strong>$12.99</strong>
+
+<button class="filled-btn" onclick="showMerchDetails('IZNA Photocard Set')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="merch-product-card" data-type="collectible">
+
+<img src="images/mer2.jpg" alt="Fan Kit">
+
+<div class="merch-product-info">
+
+<span class="badge">COLLECTIBLE</span>
+
+<h3>Babymonster Fan Kit</h3>
+
+<p>A themed fan kit with collectible goods, photo items, and fandom-inspired accessories.</p>
+
+<strong>$24.99</strong>
+
+<button class="filled-btn" onclick="showMerchDetails('Babymonster Fan Kit')">View Details</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<aside class="merch-sidebar">
+
+<div class="side-box">
+
+<h3>Browse By Category</h3>
+
+<ul>
+
+<li>Albums</li>
+
+<li>Lightsticks</li>
+
+<li>Photocards</li>
+
+<li>Fan Kits</li>
+
+<li>Accessories</li>
+
+</ul>
+
+</div>
+
+<div class="side-box">
+
+<h3>Merch Notice</h3>
+
+<p class="online-text">KFanverse currently displays merchandise for browsing only. Checkout and payment features are not included in this prototype.</p>
+
+</div>
+
+<div class="side-box">
+
+<h3>Popular Picks</h3>
+
+<ol>
+
+<li>IZNA Lightstick</li>
+
+<li>NOT JUST PRETTY Album</li>
+
+<li>Aespa Lightstick</li>
+
+<li>ZB1 Limited Album</li>
+
+</ol>
+
+</div>
+
+</aside>
+
+</section>
+
+</div>
+
+<div id="merchPopup" class="merch-popup">
+
+    <div class="merch-popup-card">
+
+        <button class="close-quiz" onclick="closeMerchPopup()">×</button>
+
+        <h2>Merch Preview</h2>
+
+        <p id="merchPopupText"></p>
+
+        <button class="filled-btn" onclick="closeMerchPopup()">Okay</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

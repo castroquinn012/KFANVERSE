@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KFanverse Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="home-wrapper">
+
+<div class="home-navbar">
+
+<div class="brand-left">
+
+<img src="images/logo.png" class="home-logo" alt="KFanverse Logo">
+
+</div>
+
+<ul class="home-nav-links">
+
+<li><a href="main.html">Home</a></li>
+
+<li><a href="updates.html">Updates</a></li>
+
+<li><a href="quizzes.html">Quizzes</a></li>
+
+<li><a href="community.html">Discussions</a></li>
+
+<li><a href="merch.html">Merchandise</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="profile.html" class="active-nav">Profile</a></li>
+
+</ul>
+
+<div class="home-nav-actions">
+
+<button class="search-btn">⌕</button>
+
+<button class="outline-btn" onclick="window.location.href='index.html'">Logout</button>
+<button class="filled-btn" onclick="showProfileTab('edit')">Edit Profile</button>
+<button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+
+</div>
+
+</div>
+
+<section class="profile-hero">
+
+<div class="profile-banner"></div>
+
+<div class="profile-card">
+
+<div class="profile-avatar">
+
+<img src="images/pf1.jfif" alt="Profile">
+
+</div>
+
+<div class="profile-info">
+
+<h1 id="profileName">NayaStar</h1>
+
+<p id="profileBioLine">@nayastar • IZNA Fan • K-pop Collector</p>
+
+<div class="profile-tags">
+
+<span>5th Gen</span>
+
+<span>Streaming Team</span>
+
+<span>Quiz Master</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="profile-layout">
+
+<div class="profile-main">
+
+<div class="profile-tabs-box">
+
+<button class="profile-tab active-profile-tab" onclick="showProfileTab('overview')">Overview</button>
+
+<button class="profile-tab" onclick="showProfileTab('edit')">Edit Profile</button>
+
+</div>
+
+<div id="overviewSection">
+
+<div class="profile-section">
+
+<div class="panel-head">
+
+<h2>About Me</h2>
+
+</div>
+
+<p class="profile-description" id="profileAbout">
+
+Hello! I’m a K-pop fan who enjoys participating in fandom discussions, collecting merchandise, and staying updated with the latest comeback news. My favorite groups include IZNA, SEVENTEEN, NCT DREAM, and BABYMONSTER.
+
+</p>
+
+</div>
+
+<div class="profile-section">
+
+<div class="panel-head">
+
+<h2>Favorite Groups</h2>
+
+</div>
+
+<div class="favorite-groups-grid">
+
+<div class="favorite-group-card">
+
+<img src="images/group5.jpg" alt="IZNA">
+
+<h3>IZNA</h3>
+
+</div>
+
+<div class="favorite-group-card">
+
+<img src="images/group3.jpg" alt="Seventeen">
+
+<h3>SEVENTEEN</h3>
+
+</div>
+
+<div class="favorite-group-card">
+
+<img src="images/group4.jpg" alt="NCT Dream">
+
+<h3>NCT DREAM</h3>
+
+</div>
+
+<div class="favorite-group-card">
+
+<img src="images/group6.jpg" alt="Babymonster">
+
+<h3>BABYMONSTER</h3>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="profile-section">
+
+<div class="panel-head">
+
+<h2>Recent Discussions</h2>
+
+</div>
+
+<div class="profile-discussion-list">
+
+<div class="profile-discussion-item">
+
+<h3>Which 2026 comeback has the best concept so far?</h3>
+
+<p>Posted 2 hours ago • 89 replies</p>
+
+</div>
+
+<div class="profile-discussion-item">
+
+<h3>What K-pop song deserves more attention?</h3>
+
+<p>Posted yesterday • 27 replies</p>
+
+</div>
+
+<div class="profile-discussion-item">
+
+<h3>Favorite lightstick designs of all time?</h3>
+
+<p>Posted 3 days ago • 41 replies</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="editProfileSection" style="display:none;">
+
+<div class="profile-section">
+
+<div class="panel-head">
+
+<h2>Edit Profile</h2>
+
+</div>
+
+<div class="edit-profile-box">
+
+<label>Display Name</label>
+
+<input type="text" id="editName" value="NayaStar">
+
+<label>Username / Bio Line</label>
+
+<input type="text" id="editBioLine" value="@nayastar • IZNA Fan • K-pop Collector">
+
+<label>About Me</label>
+
+<textarea id="editAbout">Hello! I’m a K-pop fan who enjoys participating in fandom discussions, collecting merchandise, and staying updated with the latest comeback news. My favorite groups include IZNA, SEVENTEEN, NCT DREAM, and BABYMONSTER.</textarea>
+
+<button class="filled-btn" onclick="saveProfileChanges()">Save Changes</button>
+
+<p id="profileSaveMessage"></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<aside class="profile-sidebar">
+
+<div class="side-box">
+
+<h3>Profile Stats</h3>
+
+<div class="profile-stat">
+
+<strong>42</strong>
+
+<span>Posts</span>
+
+</div>
+
+<div class="profile-stat">
+
+<strong>18</strong>
+
+<span>Quizzes Completed</span>
+
+</div>
+
+<div class="profile-stat">
+
+<strong>124</strong>
+
+<span>Community Likes</span>
+
+</div>
+
+</div>
+
+<div class="side-box">
+
+<h3>Favorite Categories</h3>
+
+<ul>
+
+<li>Comeback Discussions</li>
+
+<li>Streaming Parties</li>
+
+<li>Album Collections</li>
+
+<li>K-pop Trivia</li>
+
+</ul>
+
+</div>
+
+<div class="side-box">
+
+<h3>Achievements</h3>
+
+<div class="achievement-badge">🏆 Top Quiz Player</div>
+
+<div class="achievement-badge">💬 Active Member</div>
+
+<div class="achievement-badge">⭐ Community Favorite</div>
+
+</div>
+
+</aside>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

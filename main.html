@@ -28,27 +28,29 @@
 
         <ul class="home-nav-links">
 
-            <li><a href="#">Home</a></li>
+    <li><a href="main.html" class="active-nav">Home</a></li>
 
-            <li><a href="#">Updates</a></li>
+    <li><a href="updates.html">Updates</a></li>
 
-            <li><a href="#">Quizzes</a></li>
+    <li><a href="quizzes.html">Quizzes</a></li>
 
-            <li><a href="#">Discussions</a></li>
+    <li><a href="community.html">Discussions</a></li>
 
-            <li><a href="#">Merchandise</a></li>
+    <li><a href="merch.html">Merchandise</a></li>
 
-            <li><a href="#">About Us</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+    <li><a href="profile.html">Profile</a></li>
+
+</ul>
 
         </ul>
 
         <div class="home-nav-actions">
 
             <button class="search-btn">⌕</button>
-
-            <button class="outline-btn">Login</button>
-
-            <button class="filled-btn">Sign Up</button>
+            <button class="outline-btn" onclick="window.location.href='index.html'">Login</button>
+            <button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
 
         </div>
 
@@ -58,15 +60,15 @@
 
     <section class="hero-home">
 
-        <div class="hero-image-card">
+       <div class="hero-image-card">
 
-            <button class="hero-arrow left-arrow" onclick="prevHero()">‹</button>
+			<button class="hero-arrow left-arrow" onclick="prevHero()">‹</button>
 
-            <img id="heroCarousel" src="images/hero1.jpg" alt="Hero Carousel">
+			<img id="heroCarousel" src="images/hero1.jpg" alt="Hero Carousel">
 
-            <button class="hero-arrow right-arrow" onclick="nextHero()">›</button>
+			<button class="hero-arrow right-arrow" onclick="nextHero()">›</button>
 
-        </div>
+		</div>
 
         <div class="hero-text-card">
 
@@ -86,18 +88,22 @@
 
             <div class="hero-buttons">
 
-                <button class="filled-btn">Explore Now</button>
+				<button class="filled-btn" onclick="window.location.href='updates.html'">
+				Explore Now
 
-                <button class="outline-btn">Browse Updates</button>
+			</button>
 
-            </div>
+				<button class="outline-btn" onclick="window.location.href='updates.html'">
+				Browse Updates
+
+			</button>
+
+		</div>
 
             <div class="hero-dots">
 
                 <span class="dot active-dot"></span>
-
                 <span class="dot"></span>
-
                 <span class="dot"></span>
 
             </div>
@@ -106,45 +112,101 @@
 
     </section>
 
-    <!-- TOP INFO CARDS -->
+    <!-- MUSIC VIDEOS -->
 
-    <section class="top-stats-grid">
+    <section class="mv-section">
 
-        <div class="stat-card">
+<div class="panel-head">
 
-            <h3>174+</h3>
+<h2>Latest Comebacks</h2>
 
-            <p>Featured fandom topics</p>
+<a href="updates.html">View All</a>
 
-        </div>
+</div>
 
-        <div class="stat-card">
+<div class="mv-grid">
 
-            <h3>Team</h3>
+<div class="mv-card"
 
-            <p>A fan-centered space for updates, quizzes, discussions, and merch culture.</p>
+onclick="window.open('https://youtu.be/2fyFx2u5fbU?si=h8BFI1Y-HvNFJi4w')">
 
-        </div>
+<div class="mv-thumbnail">
 
-        <div class="stat-card">
+<img src="images/mv1.jpg" alt="IZNA MV">
 
-            <h3>12k+</h3>
+<div class="mv-overlay">
 
-            <p>Fans engaged in quizzes and content</p>
+<div class="mv-play-btn">▶</div>
 
-        </div>
+</div>
 
-        <div class="stat-card">
+</div>
 
-            <h3>34k</h3>
+<div class="mv-info">
 
-            <p>Community interactions and discussions</p>
+<h3>IZNA — MAMMA MIA</h3>
 
-        </div>
+<p>Latest comeback music video</p>
 
-    </section>
+</div>
 
-    <!-- LATEST UPDATES + TRENDING QUIZZES -->
+</div>
+
+<div class="mv-card"
+
+onclick="window.open('https://youtu.be/U6BDbXIah-Y?si=ekTJZjDVjrfgWekq')">
+
+<div class="mv-thumbnail">
+
+<img src="images/mv2.jpg" alt="aespa MV">
+
+<div class="mv-overlay">
+
+<div class="mv-play-btn">▶</div>
+
+</div>
+
+</div>
+
+<div class="mv-info">
+
+<h3>CORTIS — REDRED</h3>
+
+<p>Trending comeback release</p>
+
+</div>
+
+</div>
+
+<div class="mv-card"
+
+onclick="window.open('https://youtu.be/x3eqqoZPV_E?si=ujhsOjOaLQEMzPNa')">
+
+<div class="mv-thumbnail">
+
+<img src="images/mv3.jpg" alt="BABYMONSTER MV">
+
+<div class="mv-overlay">
+
+<div class="mv-play-btn">▶</div>
+
+</div>
+
+</div>
+
+<div class="mv-info">
+
+<h3>BABYMONSTER — CHOOM</h3>
+
+<p>Most viewed this week</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
     <section class="content-row two-panels">
 
@@ -154,7 +216,7 @@
 
                 <h2>Latest Updates</h2>
 
-                <a href="#">View All</a>
+                <a href="updates.html">View All</a>
 
             </div>
 
@@ -224,7 +286,7 @@
 
                 <h2>Trending Quizzes</h2>
 
-                <a href="#">View All</a>
+                <a href="quizzes.html">View All</a>
 
             </div>
 
@@ -288,7 +350,7 @@
 
                 <h2>Popular Discussions</h2>
 
-                <a href="#">View All</a>
+                <a href="community.html">View All</a>
 
             </div>
 
@@ -328,7 +390,7 @@
 
                 <h2>Featured Merch</h2>
 
-                <a href="#">View All</a>
+                <a href="merch.html">View All</a>
 
             </div>
 
@@ -380,87 +442,95 @@
 
     </section>
 
-    <!-- GROUP MEMBERS -->
+    <!-- KPOP GROUPS -->
 
-    <section class="panel-box members-section">
+<section class="panel-box members-section">
 
-        <div class="panel-head">
+    <div class="panel-head">
 
-            <h2>K-Pop Groups</h2>
+        <h2>K-Pop Groups</h2>
 
-            <a href="#">View All</a>
+        <a href="#">View All</a>
 
-        </div>
+    </div>
 
-        <div class="members-row">
+    <div class="members-row">
 
-            <button class="member-arrow">‹</button>
+        <button class="member-arrow">‹</button>
 
-            <div class="member-card">
+        <div class="member-card" onclick="showGroupInfo('snsd')">
 
-                <img src="images/group1.jpg" alt="Girls' Generation">
+            <img src="images/group1.jpg" alt="Girls' Generation">
 
-                <h3>Girls' Generation</h3>
+            <h3>Girls' Generation</h3>
 
-                <p>Legendary Girl Group</p>
-
-            </div>
-
-            <div class="member-card">
-
-                <img src="images/group2.jpg" alt="2PM">
-
-                <h3>2PM</h3>
-
-                <p>2nd Gen Boy Group</p>
-
-            </div>
-
-            <div class="member-card">
-
-                <img src="images/group3.jpg" alt="Seventeen">
-
-                <h3>Seventeen</h3>
-
-                <p>Performance Powerhouse</p>
-
-            </div>
-
-            <div class="member-card">
-
-                <img src="images/group4.jpg" alt="NCT Dream">
-
-                <h3>NCT Dream</h3>
-
-                <p>Youthful Unit</p>
-
-            </div>
-
-            <div class="member-card">
-
-                <img src="images/group5.jpg" alt="IZNA">
-
-                <h3>IZNA</h3>
-
-                <p>Rising Girl Group</p>
-
-            </div>
-
-            <div class="member-card">
-
-                <img src="images/group6.jpg" alt="Babymonster">
-
-                <h3>Babymonster</h3>
-
-                <p>New Gen Power</p>
-
-            </div>
-
-            <button class="member-arrow">›</button>
+            <p>Legendary Girl Group</p>
 
         </div>
 
-    </section>
+        <div class="member-card" onclick="showGroupInfo('pm')">
+
+            <img src="images/group2.jpg" alt="2PM">
+
+            <h3>2PM</h3>
+
+            <p>2nd Gen Boy Group</p>
+
+        </div>
+
+        <div class="member-card" onclick="showGroupInfo('svt')">
+
+            <img src="images/group3.jpg" alt="Seventeen">
+
+            <h3>Seventeen</h3>
+
+            <p>Performance Powerhouse</p>
+
+        </div>
+
+        <div class="member-card" onclick="showGroupInfo('nctdream')">
+
+            <img src="images/group4.jpg" alt="NCT Dream">
+
+            <h3>NCT Dream</h3>
+
+            <p>Youthful Unit</p>
+
+        </div>
+
+        <div class="member-card" onclick="showGroupInfo('izna')">
+
+            <img src="images/group5.jpg" alt="IZNA">
+
+            <h3>IZNA</h3>
+
+            <p>Rising Girl Group</p>
+
+        </div>
+
+        <div class="member-card" onclick="showGroupInfo('babymonster')">
+
+            <img src="images/group6.jpg" alt="Babymonster">
+
+            <h3>Babymonster</h3>
+
+            <p>New Gen Power</p>
+
+        </div>
+
+        <button class="member-arrow">›</button>
+
+    </div>
+
+    <div id="groupInfoBox" class="group-info-box">
+
+        <h3>Select a K-pop group</h3>
+
+        <p>Click a group card above to view short information and official SNS links.</p>
+
+    </div>
+
+</section>
 
     <!-- FOOTER -->
 

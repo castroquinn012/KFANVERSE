@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>KFanverse Updates</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="home-wrapper">
+
+    <!-- NAVBAR -->
+
+    <div class="home-navbar">
+
+        <div class="brand-left">
+
+            <img src="images/logo.png" class="home-logo" alt="KFanverse Logo">
+
+        </div>
+
+        <ul class="home-nav-links">
+
+			<li><a href="main.html">Home</a></li>
+			<li><a href="updates.html" class="active-nav">Updates</a></li>
+			<li><a href="quizzes.html">Quizzes</a></li>
+			<li><a href="community.html">Discussions</a></li>
+			<li><a href="merch.html">Merchandise</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="profile.html">Profile</a></li>
+
+			</ul>
+
+        <div class="home-nav-actions">
+
+            <button class="search-btn">⌕</button>
+
+            <button class="outline-btn" onclick="window.location.href='index.html'">Login</button>
+
+            <button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+
+        </div>
+
+    </div>
+
+    <!-- PAGE TITLE -->
+
+    <section class="inner-page-title">
+
+        <h1>Updates</h1>
+
+        <p>
+
+            Catch the latest K-pop news, trending topics, comeback announcements,
+
+            concerts, and fandom updates.
+
+        </p>
+
+    </section>
+
+    <!-- MAIN LAYOUT -->
+
+    <section class="updates-layout">
+
+        <!-- LEFT SIDE -->
+
+        <div class="updates-main">
+
+            <!-- TABS -->
+
+            <div class="updates-tabs">
+
+                <button class="active-tab" onclick="showUpdatesTab('latest')">
+
+                    Latest News
+
+                </button>
+
+                <button onclick="showUpdatesTab('trending')">
+
+                    Trending Topics
+
+                </button>
+
+            </div>
+
+            <!-- LATEST NEWS -->
+
+            <div id="latestNews" class="news-list">
+
+                <!-- NEWS 1 -->
+
+                <div class="news-row-card">
+
+                    <img src="images/update1.jpg" alt="BIGBANG Update">
+
+                    <div class="news-row-info">
+
+                        <span class="badge">PERFORMANCE</span>
+
+                        <h3>
+
+                            BIGBANG stuns fans with Coachella 2026 performance
+
+                        </h3>
+
+                        <p>
+
+                            A legendary stage comeback that sparked massive fan reactions online.
+
+                        </p>
+
+                        <p class="more-text">
+
+                            BIGBANG’s Coachella 2026 performance became one of the most talked-about moments among K-pop fans. Their powerful live vocals, nostalgic setlist, and stage charisma quickly trended across social media platforms worldwide.
+
+                        </p>
+
+                        <div class="news-meta">
+
+                            <span>1 hr ago</span>
+
+                            <a href="#" onclick="toggleReadMore(this)">
+
+                                Read More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- NEWS 2 -->
+
+                <div class="news-row-card">
+
+                    <img src="images/update2.jpg" alt="IOI Update">
+
+                    <div class="news-row-info">
+
+                        <span class="badge">COMEBACK</span>
+
+                        <h3>
+
+                            IOI releases first 2026 comeback concept photos
+
+                        </h3>
+
+                        <p>
+
+                            The long-awaited visuals have fans buzzing with excitement and nostalgia.
+
+                        </p>
+
+                        <p class="more-text">
+
+                            Fans expressed excitement after IOI revealed elegant and nostalgic teaser photos for their 2026 comeback. Many longtime fans celebrated the return of the group online.
+
+                        </p>
+
+                        <div class="news-meta">
+
+                            <span>2 hrs ago</span>
+
+                            <a href="#" onclick="toggleReadMore(this)">
+
+                                Read More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- NEWS 3 -->
+
+                <div class="news-row-card">
+
+                    <img src="images/update3.jpg" alt="Evan Update">
+
+                    <div class="news-row-info">
+
+                        <span class="badge">ARTIST UPDATE</span>
+
+                        <h3>
+
+                            Heesung officially changes his stage name to Evan
+
+                        </h3>
+
+                        <p>
+
+                            The announcement quickly trended as fans shared their first reactions.
+
+                        </p>
+
+                        <p class="more-text">
+
+                            The artist’s agency officially confirmed the stage name change through social media. Fans immediately shared reactions and theories regarding the new image and concept direction.
+
+                        </p>
+
+                        <div class="news-meta">
+
+                            <span>3 hrs ago</span>
+
+                            <a href="#" onclick="toggleReadMore(this)">
+
+                                Read More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TRENDING TOPICS -->
+
+            <div id="trendingTopics" class="news-list" style="display:none;">
+
+                <!-- TRENDING 1 -->
+
+                <div class="news-row-card">
+
+                    <img src="images/up1.jpg" alt="Trending Topic">
+
+                    <div class="news-row-info">
+
+                        <span class="badge">TRENDING</span>
+
+                        <h3>
+
+                            Fans rank the most iconic comeback concepts of 2026
+
+                        </h3>
+
+                        <p>
+
+                            K-pop communities are actively discussing the strongest comeback concepts this year.
+
+                        </p>
+
+                        <p class="more-text">
+
+                            Thousands of fans participated in online discussions and rankings to choose the most creative and visually stunning comeback concepts released this year.
+
+                        </p>
+
+                        <div class="news-meta">
+
+                            <span>Trending Now</span>
+
+                            <a href="#" onclick="toggleReadMore(this)">
+
+                                Read More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TRENDING 2 -->
+
+                <div class="news-row-card">
+
+                    <img src="images/up2.jpg" alt="Trending Topic">
+
+                    <div class="news-row-info">
+
+                        <span class="badge">HOT TOPIC</span>
+
+                        <h3>
+
+                            Lightstick culture becomes a major discussion online
+
+                        </h3>
+
+                        <p>
+
+                            Fans are sharing their favorite concert experiences and lightstick collections.
+
+                        </p>
+
+                        <p class="more-text">
+
+                            Many fans posted photos of their concert collections and discussed the evolution of official lightstick designs throughout different K-pop generations.
+
+                        </p>
+
+                        <div class="news-meta">
+
+                            <span>Trending Today</span>
+
+                            <a href="#" onclick="toggleReadMore(this)">
+
+                                Read More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- TRENDING 3 -->
+
+                <div class="news-row-card">
+
+                    <img src="images/up3.jpg" alt="Trending Topic">
+
+                    <div class="news-row-info">
+
+                        <span class="badge">FANDOM</span>
+
+                        <h3>
+
+                            Streaming parties gain popularity among fandoms
+
+                        </h3>
+
+                        <p>
+
+                            Organized streaming events continue helping fans support artists together.
+
+                        </p>
+
+                        <p class="more-text">
+
+                            Fanbases are organizing larger streaming parties and voting projects to maximize comeback support and increase fandom participation online.
+
+                        </p>
+
+                        <div class="news-meta">
+
+                            <span>Trending This Week</span>
+
+                            <a href="#" onclick="toggleReadMore(this)">
+
+                                Read More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+
+        <aside class="updates-sidebar">
+
+            <!-- CATEGORIES -->
+
+            <div class="side-box">
+
+                <h3>Categories</h3>
+
+                <ul>
+
+                    <li>All</li>
+
+                    <li>Comeback</li>
+
+                    <li>Rumors</li>
+
+                    <li>Awards</li>
+
+                    <li>Concerts</li>
+
+                    <li>Industry News</li>
+
+                </ul>
+
+            </div>
+
+            <!-- TRENDING NOW -->
+
+            <div class="side-box">
+
+                <h3>Trending Now</h3>
+
+                <ol>
+
+                    <li>World tour announced</li>
+
+                    <li>Artist X new MV</li>
+
+                    <li>Award show winners</li>
+
+                    <li>Comeback teaser drops</li>
+
+                    <li>Fans trend new hashtags</li>
+
+                </ol>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KFanverse Discussions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="home-wrapper">
+
+<div class="home-navbar">
+
+<div class="brand-left">
+
+<img src="images/logo.png" class="home-logo" alt="KFanverse Logo">
+
+</div>
+
+<ul class="home-nav-links">
+
+<li><a href="main.html">Home</a></li>
+
+<li><a href="updates.html">Updates</a></li>
+
+<li><a href="quizzes.html">Quizzes</a></li>
+
+<li><a href="community.html" class="active-nav">Discussions</a></li>
+
+<li><a href="merch.html">Merchandise</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="profile.html">Profile</a></li>
+
+</ul>
+
+<div class="home-nav-actions">
+
+<button class="search-btn">⌕</button>
+
+<button class="outline-btn" onclick="window.location.href='index.html'">Login</button>
+
+<button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+
+</div>
+
+</div>
+
+<section class="inner-page-title">
+
+<h1>Discussions</h1>
+
+<p>Join fandom conversations, share your opinions, and connect with other K-pop fans inside KFanverse.</p>
+
+</section>
+
+<section class="community-layout">
+
+<div class="community-main">
+
+<div class="community-topbar">
+
+<div class="discussion-search">
+
+<input type="text" id="discussionSearch" placeholder="Search discussions..." onkeyup="searchDiscussions()">
+
+<button>⌕</button>
+
+</div>
+
+<button class="filled-btn" onclick="openPostModal()">+ Create Post</button>
+
+</div>
+
+<div class="discussion-header">
+
+<span>Topic</span>
+
+<span>Replies</span>
+
+<span>Activity</span>
+
+</div>
+
+<div id="discussionList" class="discussion-feed">
+
+<div class="discussion-row">
+
+<div class="discussion-topic">
+
+<div class="avatar-circle">💬</div>
+
+<div>
+
+<h3>Which 2026 comeback has the best concept so far?</h3>
+
+<p>By User_21 • Comeback Talk</p>
+
+</div>
+
+</div>
+
+<span>89</span>
+
+<span>1 hr ago</span>
+
+</div>
+
+<div class="discussion-row">
+
+<div class="discussion-topic">
+
+<div class="avatar-circle">🎤</div>
+
+<div>
+
+<h3>Do you think 2nd gen groups are dominating nostalgia again?</h3>
+
+<p>By FanverseTalk • K-pop Generations</p>
+
+</div>
+
+</div>
+
+<span>64</span>
+
+<span>2 hrs ago</span>
+
+</div>
+
+<div class="discussion-row">
+
+<div class="discussion-topic">
+
+<div class="avatar-circle">⭐</div>
+
+<div>
+
+<h3>What makes a fandom space feel truly welcoming?</h3>
+
+<p>By KHeartDaily • Community</p>
+
+</div>
+
+</div>
+
+<span>42</span>
+
+<span>3 hrs ago</span>
+
+</div>
+
+<div class="discussion-row">
+
+<div class="discussion-topic">
+
+<div class="avatar-circle">✨</div>
+
+<div>
+
+<h3>Which group has the prettiest lightstick design?</h3>
+
+<p>By PinkBeat • Merchandise</p>
+
+</div>
+
+</div>
+
+<span>31</span>
+
+<span>5 hrs ago</span>
+
+</div>
+
+<div class="discussion-row">
+
+<div class="discussion-topic">
+
+<div class="avatar-circle">🎧</div>
+
+<div>
+
+<h3>What K-pop song deserves more attention?</h3>
+
+<p>By StreamCloud • Music</p>
+
+</div>
+
+</div>
+
+<span>27</span>
+
+<span>Today</span>
+
+</div>
+
+</div>
+
+<div class="pagination">
+
+<span>&lt;</span>
+
+<span class="active-page">1</span>
+
+<span>2</span>
+
+<span>3</span>
+
+<span>4</span>
+
+<span>...</span>
+
+<span>&gt;</span>
+
+</div>
+
+</div>
+
+<aside class="community-sidebar">
+
+<div class="side-box">
+
+<h3>Trending Topics</h3>
+
+<ol>
+
+<li>Best comeback concept</li>
+
+<li>2026 award predictions</li>
+
+<li>Favorite lightstick</li>
+
+<li>Most iconic stage</li>
+
+<li>Best fandom name</li>
+
+</ol>
+
+</div>
+
+<div class="side-box">
+
+<h3>Fandom Categories</h3>
+
+<ul>
+
+<li>Comeback Talk</li>
+
+<li>Music & Streaming</li>
+
+<li>Merchandise</li>
+
+<li>Concerts</li>
+
+<li>General K-pop</li>
+
+</ul>
+
+</div>
+
+<div class="side-box">
+
+<h3>Online Members</h3>
+
+<p class="online-text">124 fans are currently browsing discussions.</p>
+
+</div>
+
+</aside>
+
+</section>
+
+</div>
+
+<div id="postModal" class="post-modal">
+
+<div class="post-modal-card">
+
+<button class="close-quiz" onclick="closePostModal()">×</button>
+
+<h2>Create Discussion Post</h2>
+
+<p class="post-desc">Share a topic with the KFanverse community.</p>
+
+<label>Discussion Title</label>
+
+<input type="text" id="postTitle" placeholder="Enter your discussion title">
+
+<label>Category</label>
+
+<select id="postCategory">
+
+<option>Comeback Talk</option>
+
+<option>Music & Streaming</option>
+
+<option>Merchandise</option>
+
+<option>Concerts</option>
+
+<option>General K-pop</option>
+
+</select>
+
+<label>Message</label>
+
+<textarea id="postMessage" placeholder="Write your thoughts here..."></textarea>
+
+<button class="filled-btn post-submit-btn" onclick="submitPost()">Post Discussion</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
