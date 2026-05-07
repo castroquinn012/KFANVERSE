@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KFanverse Super Admin Dashboard</title>
+
+<link rel="icon" type="image/png" href="images/favicon.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="admin-wrapper">
+
+<aside class="admin-sidebar">
+
+<img src="images/logo.png" class="admin-logo">
+
+<h3>Super Admin</h3>
+
+<ul>
+
+<li class="active-admin"
+
+onclick="showAdminSection('dashboard', this)">
+
+Dashboard
+
+</li>
+
+<li onclick="showAdminSection('users', this)">
+
+User Management
+
+</li>
+
+<li onclick="showAdminSection('admins', this)">
+
+Admin Management
+
+</li>
+
+<li onclick="showAdminSection('content', this)">
+
+System Content
+
+</li>
+
+<li onclick="showAdminSection('reports', this)">
+
+Reports & Analytics
+
+</li>
+
+</ul>
+
+<button onclick="window.location.href='index.html'">
+
+Logout
+
+</button>
+
+</aside>
+
+<main class="admin-main">
+
+<section class="admin-header">
+
+<h1>Dashboard Overview</h1>
+
+<p>
+
+Welcome, Super Admin. Monitor users, admins, content, and overall system activity.
+
+</p>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="admin-section active-admin-section">
+
+<div class="dashboard-cards">
+
+<div class="dashboard-card">
+
+<h3>245</h3>
+
+<p>Total Users</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>4</h3>
+
+<p>Total Admins</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>102</h3>
+
+<p>Total Posts</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>89%</h3>
+
+<p>System Activity</p>
+
+</div>
+
+</div>
+
+<div class="admin-content-grid">
+
+<div class="admin-box">
+
+<h2>Recent System Activity</h2>
+
+<div id="recentActivity" class="admin-list">
+
+<p>New admin account added • 3 mins ago</p>
+
+<p>User management updated • 8 mins ago</p>
+
+<p>System content modified • 15 mins ago</p>
+
+<p>Reports generated successfully • 20 mins ago</p>
+
+</div>
+
+</div>
+
+<div class="admin-box">
+
+<h2>Management Tasks</h2>
+
+<div class="admin-list">
+
+<p>Review admin accounts.</p>
+
+<p>Monitor user activity.</p>
+
+<p>Check overall platform performance.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- USER MANAGEMENT -->
+
+<section id="users" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>User Management</h2>
+
+<button class="filled-btn" onclick="addUser()">
+
++ Add User
+
+</button>
+
+</div>
+
+<div id="userList" class="admin-list">
+
+<p>
+
+quinn • quinn@gmail.com • User • Active
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+naya_star • naya@gmail.com • User • Active
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+fanverse_user • fanverse@gmail.com • User • Inactive
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADMIN MANAGEMENT -->
+
+<section id="admins" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>Admin Management</h2>
+
+<button class="filled-btn" onclick="addAdmin()">
+
++ Add Admin
+
+</button>
+
+</div>
+
+<div id="adminList" class="admin-list">
+
+<p>
+
+admin01 • admin@gmail.com • Admin
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+content_admin • content@gmail.com • Admin
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SYSTEM CONTENT -->
+
+<section id="content" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>System Content</h2>
+
+<button class="filled-btn"
+
+onclick="addAdminRow('contentList','New System Content')">
+
++ Add Content
+
+</button>
+
+</div>
+
+<div id="contentList" class="admin-list">
+
+<p>
+
+Homepage Featured Content
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Updates Page Content
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Merchandise Display Content
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REPORTS -->
+
+<section id="reports" class="admin-section">
+
+<div class="admin-content-grid">
+
+<div class="admin-box">
+
+<h2>Reports</h2>
+
+<div class="admin-list">
+
+<p>Total users increased this week.</p>
+
+<p>Discussions page has the highest activity.</p>
+
+<p>Quiz participation remains stable.</p>
+
+<p>Merchandise page received more views today.</p>
+
+</div>
+
+</div>
+
+<div class="admin-box">
+
+<h2>Analytics Summary</h2>
+
+<div class="admin-list">
+
+<p>Most visited page: Homepage</p>
+
+<p>Most used feature: Discussions</p>
+
+<p>Most clicked group: IZNA</p>
+
+<p>Top quiz: EXO Trivia Challenge</p>
+
+</div>
+
+<!-- LINE GRAPH -->
+
+<div class="line-chart-box">
+
+<svg viewBox="0 0 600 220" class="line-chart">
+
+<polyline points="40,180 120,150 200,165 280,120 360,140 440,90 520,50"></polyline>
+
+<circle cx="40" cy="180" r="5"></circle>
+
+<circle cx="120" cy="150" r="5"></circle>
+
+<circle cx="200" cy="165" r="5"></circle>
+
+<circle cx="280" cy="120" r="5"></circle>
+
+<circle cx="360" cy="140" r="5"></circle>
+
+<circle cx="440" cy="90" r="5"></circle>
+
+<circle cx="520" cy="50" r="5"></circle>
+
+</svg>
+
+<div class="chart-labels">
+
+<span>Mon</span>
+
+<span>Tue</span>
+
+<span>Wed</span>
+
+<span>Thu</span>
+
+<span>Fri</span>
+
+<span>Sat</span>
+
+<span>Sun</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

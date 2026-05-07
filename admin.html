@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KFanverse Admin Dashboard</title>
+
+<link rel="icon" type="image/png" href="images/favicon.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-home-page">
+
+<div class="admin-wrapper">
+
+<aside class="admin-sidebar">
+
+<img src="images/logo.png" class="admin-logo">
+
+<h3>Admin Panel</h3>
+
+<ul>
+
+<li class="active-admin"
+
+onclick="showAdminSection('dashboard', this)">
+
+Dashboard
+
+</li>
+
+<li onclick="showAdminSection('updates', this)">
+
+Manage Updates
+
+</li>
+
+<li onclick="showAdminSection('quizzes', this)">
+
+Manage Quizzes
+
+</li>
+
+<li onclick="showAdminSection('discussions', this)">
+
+Manage Discussions
+
+</li>
+
+<li onclick="showAdminSection('merchandise', this)">
+
+Manage Merchandise
+
+</li>
+
+</ul>
+
+<button onclick="window.location.href='index.html'">
+
+Logout
+
+</button>
+
+</aside>
+
+<main class="admin-main">
+
+<section class="admin-header">
+
+<h1>Dashboard Overview</h1>
+
+<p>
+
+Welcome, Admin. Manage KFanverse content and monitor platform activity.
+
+</p>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="admin-section active-admin-section">
+
+<div class="dashboard-cards">
+
+<div class="dashboard-card">
+
+<h3>24</h3>
+
+<p>Total Updates</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>12</h3>
+
+<p>Total Quizzes</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>48</h3>
+
+<p>Discussion Posts</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>18</h3>
+
+<p>Merch Items</p>
+
+</div>
+
+</div>
+
+<div class="admin-content-grid">
+
+<div class="admin-box">
+
+<h2>Recent Activity</h2>
+
+<div id="recentActivity" class="admin-list">
+
+<p>User posted a new discussion • 2 mins ago</p>
+
+<p>EXO Trivia quiz completed by a user • 5 mins ago</p>
+
+<p>New merchandise item viewed • 10 mins ago</p>
+
+<p>User clicked IZNA SNS links • 15 mins ago</p>
+
+</div>
+
+</div>
+
+<div class="admin-box">
+
+<h2>Admin Tasks</h2>
+
+<div class="admin-list">
+
+<p>Review latest discussion posts.</p>
+
+<p>Update quiz questions.</p>
+
+<p>Check merchandise information.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MANAGE UPDATES -->
+
+<section id="updates" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>Manage Updates</h2>
+
+<button class="filled-btn"
+
+onclick="addAdminRow('updatesList','New K-pop Update')">
+
++ Add News
+
+</button>
+
+</div>
+
+<div id="updatesList" class="admin-list">
+
+<p>
+
+BIGBANG Coachella Performance
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+IOI 2026 Comeback Concept Photos
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Heesung Changes Stage Name
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MANAGE QUIZZES -->
+
+<section id="quizzes" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>Manage Quizzes</h2>
+
+<button class="filled-btn"
+
+onclick="addAdminRow('quizList','New Quiz')">
+
++ Create Quiz
+
+</button>
+
+</div>
+
+<div id="quizList" class="admin-list">
+
+<p>
+
+EXO Trivia Challenge
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Guess What Company Is This Group
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Guess What Gen Is This Group
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MANAGE DISCUSSIONS -->
+
+<section id="discussions" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>Manage Discussions</h2>
+
+<button class="filled-btn"
+
+onclick="addAdminRow('discussionListAdmin','New Discussion Post')">
+
++ Add Post
+
+</button>
+
+</div>
+
+<div id="discussionListAdmin" class="admin-list">
+
+<p>
+
+Which 2026 comeback has the best concept?
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Review</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Favorite lightstick designs of all time?
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Review</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+What K-pop song deserves more attention?
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Review</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MANAGE MERCH -->
+
+<section id="merchandise" class="admin-section">
+
+<div class="admin-box">
+
+<div class="admin-section-header">
+
+<h2>Manage Merchandise</h2>
+
+<button class="filled-btn"
+
+onclick="addAdminRow('merchList','New Merchandise')">
+
++ Add Product
+
+</button>
+
+</div>
+
+<div id="merchList" class="admin-list">
+
+<p>
+
+IZNA NOT JUST PRETTY Album
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+IZNA Lightstick
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+<p>
+
+Aespa Lightstick
+
+<span>
+
+<button class="admin-mini-btn"
+
+onclick="editAdminItem(this)">Edit</button>
+
+<button class="admin-mini-btn"
+
+onclick="deleteAdminItem(this)">Delete</button>
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

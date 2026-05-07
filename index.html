@@ -6,6 +6,8 @@
 
 <title>KFanverse Login</title>
 
+<link rel="icon" type="image/png" href="images/favicon.jpg">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
@@ -28,11 +30,11 @@
 
             <label>Email Address</label>
 
-            <input type="email" placeholder="Enter your email">
+            <input type="text" id="loginUsername" placeholder="Enter username">
 
             <label>Password</label>
 
-            <input type="password" placeholder="Enter your password">
+            <input type="password" id="loginPassword" placeholder="Enter your password">
 
             <div class="login-options">
 
@@ -48,13 +50,19 @@
 
             <button class="login-btn" onclick="enterSite()">Log in</button>
 
-            <button class="register-btn">Sign Up</button>
+            <button class="register-btn" onclick="window.location.href='signup.html'">Sign Up</button>
 
             <p class="register-text">
 
-                Don’t have an account? <span>Create account</span>
+			Don’t have an account?
 
-            </p>
+			<span onclick="window.location.href='signup.html'">
+
+			Create account
+
+			</span>
+
+			</p>
 			
 			<div class="demo-login-strip">
 
