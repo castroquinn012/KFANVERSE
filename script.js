@@ -364,7 +364,31 @@ function closeQuiz(){
 
 function openPostModal(){
 
-    document.getElementById("postModal").style.display = "flex";
+	document.getElementById("guidelinesModal").style.display = "flex";
+
+}
+
+function closeGuidelines(){
+
+	document.getElementById("guidelinesModal").style.display = "none";
+
+}
+
+function continuePost(){
+
+	const check = document.getElementById("guidelinesCheck");
+
+	if(!check.checked){
+
+	alert("Please agree to the community guidelines first.");
+
+return;
+
+}
+
+	document.getElementById("guidelinesModal").style.display = "none";
+
+	document.getElementById("postModal").style.display = "flex";
 
 }
 
@@ -799,6 +823,84 @@ function addUser(){
 function addAdmin(){
 
     addAdminRow("adminList", "new_admin • admin@gmail.com • Admin");
+
+}
+
+function likePost(button){
+
+let count = button.querySelector("span");
+
+let currentLikes = parseInt(count.textContent);
+
+count.textContent = currentLikes + 1;
+
+}
+
+function replyPost(){
+
+const reply = prompt("Enter your reply:");
+
+if(reply && reply.trim() !== ""){
+
+alert("Reply posted successfully!");
+
+}
+
+}
+
+function replyPost(button){
+
+const parent = button.closest(".discussion-actions");
+
+let existingBox = parent.querySelector(".reply-box");
+
+if(existingBox){
+
+existingBox.remove();
+
+return;
+
+}
+
+const box = document.createElement("div");
+
+box.className = "reply-box";
+
+box.innerHTML = `
+
+<input type="text" placeholder="Write your reply...">
+
+<button onclick="submitReply(this)">Send</button>
+
+`;
+
+parent.appendChild(box);
+
+}
+
+function submitReply(button){
+
+const box = button.parentElement;
+
+const input = box.querySelector("input");
+
+if(input.value.trim() === ""){
+
+alert("Please enter a reply.");
+
+return;
+
+}
+
+const reply = document.createElement("p");
+
+reply.className = "reply-text";
+
+reply.textContent = "You replied: " + input.value;
+
+box.parentElement.appendChild(reply);
+
+box.remove();
 
 }
 

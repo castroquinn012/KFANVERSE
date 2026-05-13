@@ -34,7 +34,7 @@
 
 <li><a href="updates.html">Updates</a></li>
 
-<li><a href="quizzes.html">Quizzes</a></li>
+<li><a href="quizzes.html">Games</a></li>
 
 <li><a href="community.html" class="active-nav">Discussions</a></li>
 
@@ -42,17 +42,14 @@
 
 <li><a href="about.html">About Us</a></li>
 
-<li><a href="profile.html">Profile</a></li>
 
 </ul>
 
 <div class="home-nav-actions">
 
 <button class="search-btn">⌕</button>
-
-<button class="outline-btn" onclick="window.location.href='index.html'">Login</button>
-
-<button class="filled-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+<button class="filled-btn" onclick="window.location.href='profile.html'">Profile</button>
+<button class="outline-btn" onclick="window.location.href='index.html'">Logout</button>
 
 </div>
 
@@ -108,6 +105,14 @@
 
 <p>By User_21 • Comeback Talk</p>
 
+<div class="discussion-actions">
+
+<button onclick="likePost(this)">❤️ Like <span>0</span></button>
+
+<button onclick="replyPost(this)">💬 Reply</button>
+
+</div>
+
 </div>
 
 </div>
@@ -129,6 +134,14 @@
 <h3>Do you think 2nd gen groups are dominating nostalgia again?</h3>
 
 <p>By FanverseTalk • K-pop Generations</p>
+
+<div class="discussion-actions">
+
+<button onclick="likePost(this)">❤️ Like <span>0</span></button>
+
+<button onclick="replyPost(this)">💬 Reply</button>
+
+</div>
 
 </div>
 
@@ -152,6 +165,14 @@
 
 <p>By KHeartDaily • Community</p>
 
+<div class="discussion-actions">
+
+<button onclick="likePost(this)">❤️ Like <span>0</span></button>
+
+<button onclick="replyPost(this)">💬 Reply</button>
+
+</div>
+
 </div>
 
 </div>
@@ -174,6 +195,14 @@
 
 <p>By PinkBeat • Merchandise</p>
 
+<div class="discussion-actions">
+
+<button onclick="likePost(this)">❤️ Like <span>0</span></button>
+
+<button onclick="replyPost(this)">💬 Reply</button>
+
+</div>
+
 </div>
 
 </div>
@@ -195,6 +224,14 @@
 <h3>What K-pop song deserves more attention?</h3>
 
 <p>By StreamCloud • Music</p>
+
+<div class="discussion-actions">
+
+<button onclick="likePost(this)">❤️ Like <span>0</span></button>
+
+<button onclick="replyPost(this)">💬 Reply</button>
+
+</div>
 
 </div>
 
@@ -281,6 +318,58 @@
 </aside>
 
 </section>
+
+</div>
+
+<div id="guidelinesModal" class="post-modal">
+
+<div class="post-modal-card">
+
+<h2>Community Guidelines</h2>
+
+<div class="guidelines-text">
+
+<p>• Respect all members and fandoms.</p>
+
+<p>• Avoid hate speech, fanwars, and offensive content.</p>
+
+<p>• Do not share false information or spam posts.</p>
+
+<p>• Keep discussions appropriate and related to K-pop.</p>
+
+<p>• Any harmful or disrespectful behavior may result in post removal.</p>
+
+</div>
+
+<label class="remember-me">
+
+<input type="checkbox" id="guidelinesCheck">
+
+I agree to follow the community guidelines.
+
+</label>
+
+<div class="quiz-modal-buttons">
+
+<button class="outline-btn"
+
+onclick="closeGuidelines()">
+
+Cancel
+
+</button>
+
+<button class="filled-btn"
+
+onclick="continuePost()">
+
+Continue
+
+</button>
+
+</div>
+
+</div>
 
 </div>
 
